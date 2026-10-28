@@ -1,57 +1,76 @@
-import { Platform, StyleSheet, Text, type TextProps } from 'react-native';
-
-import { Fonts, ThemeColor } from '@/constants/theme';
-import { useTheme } from '@/hooks/use-theme';
+import { Platform, Text, type TextProps } from 'react-native';
+import { Colors, Typography } from '@/theme';
 
 export type ThemedTextProps = TextProps & {
-  type?: 'default' | 'title' | 'small' | 'smallBold' | 'subtitle' | 'link' | 'linkPrimary' | 'code';
-  themeColor?: ThemeColor;
+  type?: 'default' | 'title' | 'small' | 'smallBold' | 'subtitle' | 'link' | 'linkPrimary' | 'code' | 'caption';
+  color?: string;
+  themeColor?: string;
 };
 
-export function ThemedText({ style, type = 'default', themeColor, ...rest }: ThemedTextProps) {
-  const theme = useTheme();
+export function ThemedText({
+  style,
+  type = 'default',
+  color,
+  themeColor,
+  ...rest
+}: ThemedTextProps) {
+  let textColor = color ?? Colors.text;
 
-  return <Text style={[{ color: theme[themeColor ?? 'text'] }, styles[type], style]} {...rest} />;
+  if (themeColor === 'textSecondary') {
+    textColor = Colors.secondaryText;
+  } else if (themeColor === 'text') {
+    textColor = Colors.text;
+  }
+
+  const typeStyles = {
+    caption: {
+      fontSize: Typography.caption.fontSize,
+      lineHeight: Typography.caption.lineHeight,
+      fontWeight: Typography.caption.fontWeight,
+    },
+    small: {
+      fontSize: Typography.small.fontSize,
+      lineHeight: Typography.small.lineHeight,
+      fontWeight: Typography.small.fontWeight,
+    },
+    smallBold: {
+      fontSize: Typography.smallBold.fontSize,
+      lineHeight: Typography.smallBold.lineHeight,
+      fontWeight: Typography.smallBold.fontWeight,
+    },
+    default: {
+      fontSize: Typography.body.fontSize,
+      lineHeight: Typography.body.lineHeight,
+      fontWeight: Typography.body.fontWeight,
+    },
+    title: {
+      fontSize: Typography.hero.fontSize,
+      lineHeight: Typography.hero.lineHeight,
+      fontWeight: Typography.hero.fontWeight,
+    },
+    subtitle: {
+      fontSize: Typography.title.fontSize,
+      lineHeight: Typography.title.lineHeight,
+      fontWeight: Typography.title.fontWeight,
+    },
+    link: {
+      fontSize: Typography.small.fontSize,
+      lineHeight: Typography.small.lineHeight,
+      color: Colors.primary,
+      fontWeight: Typography.smallBold.fontWeight,
+    },
+    linkPrimary: {
+      fontSize: Typography.small.fontSize,
+      lineHeight: Typography.small.lineHeight,
+      color: Colors.primary,
+      fontWeight: Typography.title.fontWeight,
+    },
+    code: {
+      fontSize: Typography.caption.fontSize,
+      lineHeight: Typography.caption.lineHeight,
+      fontWeight: Platform.select({ android: Typography.smallBold.fontWeight }) ?? Typography.small.fontWeight,
+    },
+  }[type];
+
+  return <Text style={[{ color: textColor }, typeStyles, style]} {...rest} />;
 }
-
-const styles = StyleSheet.create({
-  small: {
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: 500,
-  },
-  smallBold: {
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: 700,
-  },
-  default: {
-    fontSize: 16,
-    lineHeight: 24,
-    fontWeight: 500,
-  },
-  title: {
-    fontSize: 48,
-    fontWeight: 600,
-    lineHeight: 52,
-  },
-  subtitle: {
-    fontSize: 32,
-    lineHeight: 44,
-    fontWeight: 600,
-  },
-  link: {
-    lineHeight: 30,
-    fontSize: 14,
-  },
-  linkPrimary: {
-    lineHeight: 30,
-    fontSize: 14,
-    color: '#3c87f7',
-  },
-  code: {
-    fontFamily: Fonts.mono,
-    fontWeight: Platform.select({ android: 700 }) ?? 500,
-    fontSize: 12,
-  },
-});

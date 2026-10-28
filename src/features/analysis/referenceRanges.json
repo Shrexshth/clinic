@@ -1,0 +1,1297 @@
+{
+  "TODO": "CRITICAL NOTICE: These reference ranges are for demonstration and algorithmic structure only. They MUST be reviewed, validated, and calibrated against a certified clinical laboratory source (e.g., Quest Diagnostics, LabCorp, Mayo Clinic Laboratories, or CLSI guidelines) prior to clinical release.",
+  "version": "1.0.0",
+  "lastUpdated": "2026-10-28",
+  "todoDisclaimer": "TODO: Mandatory clinical source audit required before release.",
+  "markers": [
+    {
+      "id": "hemoglobin",
+      "name": "Hemoglobin",
+      "canonicalUnit": "g/dL",
+      "category": "Complete Blood Count",
+      "aliases": ["hb", "hgb", "haemoglobin", "total hemoglobin", "blood hemoglobin", "hemoglobin (hb)"],
+      "unitConversions": {
+        "g/dl": 1.0,
+        "g/l": 0.1,
+        "mmol/l": 1.611
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 13.8,
+          "normalMax": 17.2,
+          "borderlineLowMin": 13.0,
+          "borderlineHighMax": 17.8
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 12.1,
+          "normalMax": 15.1,
+          "borderlineLowMin": 11.5,
+          "borderlineHighMax": 15.6
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 17,
+          "unit": "g/dL",
+          "normalMin": 11.5,
+          "normalMax": 15.5,
+          "borderlineLowMin": 11.0,
+          "borderlineHighMax": 16.0
+        },
+        {
+          "sex": "any",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 12.5,
+          "normalMax": 16.5,
+          "borderlineLowMin": 12.0,
+          "borderlineHighMax": 17.0
+        }
+      ]
+    },
+    {
+      "id": "rbc",
+      "name": "Red Blood Cell Count",
+      "canonicalUnit": "million/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["rbc", "red blood cell", "red blood cell count", "erythrocytes", "erythrocyte count", "rbc count"],
+      "unitConversions": {
+        "million/mcl": 1.0,
+        "million/ul": 1.0,
+        "10^12/l": 1.0,
+        "x10^12/l": 1.0,
+        "t/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "million/mcL",
+          "normalMin": 4.7,
+          "normalMax": 6.1,
+          "borderlineLowMin": 4.3,
+          "borderlineHighMax": 6.5
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "million/mcL",
+          "normalMin": 4.2,
+          "normalMax": 5.4,
+          "borderlineLowMin": 3.9,
+          "borderlineHighMax": 5.8
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "million/mcL",
+          "normalMin": 4.3,
+          "normalMax": 5.8,
+          "borderlineLowMin": 4.0,
+          "borderlineHighMax": 6.2
+        }
+      ]
+    },
+    {
+      "id": "wbc",
+      "name": "White Blood Cell Count",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["wbc", "white blood cells", "leukocytes", "leucocytes", "total leukocyte count", "tlc", "wbc count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "10^3/ul": 1000.0,
+        "k/ul": 1000.0,
+        "10^9/l": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 12,
+          "unit": "/mcL",
+          "normalMin": 5000,
+          "normalMax": 14000,
+          "borderlineLowMin": 4500,
+          "borderlineHighMax": 15500
+        },
+        {
+          "sex": "any",
+          "minAge": 13,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 4500,
+          "normalMax": 11000,
+          "borderlineLowMin": 4000,
+          "borderlineHighMax": 12500
+        }
+      ]
+    },
+    {
+      "id": "platelets",
+      "name": "Platelets",
+      "canonicalUnit": "10^3/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["platelets", "plt", "platelet count", "thrombocytes"],
+      "unitConversions": {
+        "10^3/mcl": 1.0,
+        "10^3/ul": 1.0,
+        "k/ul": 1.0,
+        "10^9/l": 1.0,
+        "/mcl": 0.001,
+        "/ul": 0.001
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "10^3/mcL",
+          "normalMin": 150,
+          "normalMax": 450,
+          "borderlineLowMin": 130,
+          "borderlineHighMax": 500
+        }
+      ]
+    },
+    {
+      "id": "fasting_glucose",
+      "name": "Fasting Glucose",
+      "canonicalUnit": "mg/dL",
+      "category": "Metabolic",
+      "aliases": ["fasting glucose", "glucose fasting", "fbs", "fasting blood sugar", "fpg", "fasting plasma glucose", "blood sugar fasting", "glucose"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 18.0182
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 70,
+          "normalMax": 99,
+          "borderlineHighMax": 125
+        }
+      ]
+    },
+    {
+      "id": "hba1c",
+      "name": "HbA1c",
+      "canonicalUnit": "%",
+      "category": "Metabolic",
+      "aliases": ["hba1c", "a1c", "glycated hemoglobin", "glycohemoglobin", "glycosylated hemoglobin", "hemoglobin a1c"],
+      "unitConversions": {
+        "%": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "%",
+          "normalMin": 4.0,
+          "normalMax": 5.6,
+          "borderlineHighMax": 6.4
+        }
+      ]
+    },
+    {
+      "id": "total_cholesterol",
+      "name": "Total Cholesterol",
+      "canonicalUnit": "mg/dL",
+      "category": "Lipids",
+      "aliases": ["total cholesterol", "cholesterol total", "serum cholesterol", "cholesterol"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 38.67
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 125,
+          "normalMax": 199,
+          "borderlineHighMax": 239
+        }
+      ]
+    },
+    {
+      "id": "ldl_cholesterol",
+      "name": "LDL Cholesterol",
+      "canonicalUnit": "mg/dL",
+      "category": "Lipids",
+      "aliases": ["ldl", "ldl cholesterol", "ldl-c", "low density lipoprotein", "bad cholesterol"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 38.67
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 99,
+          "borderlineHighMax": 159
+        }
+      ]
+    },
+    {
+      "id": "hdl_cholesterol",
+      "name": "HDL Cholesterol",
+      "canonicalUnit": "mg/dL",
+      "category": "Lipids",
+      "aliases": ["hdl", "hdl cholesterol", "hdl-c", "high density lipoprotein", "good cholesterol"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 38.67
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 100,
+          "borderlineLowMin": 40
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 60,
+          "normalMax": 100,
+          "borderlineLowMin": 50
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 50,
+          "normalMax": 100,
+          "borderlineLowMin": 40
+        }
+      ]
+    },
+    {
+      "id": "triglycerides",
+      "name": "Triglycerides",
+      "canonicalUnit": "mg/dL",
+      "category": "Lipids",
+      "aliases": ["triglycerides", "tg", "trigs", "serum triglycerides"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 88.57
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 40,
+          "normalMax": 149,
+          "borderlineHighMax": 199
+        }
+      ]
+    },
+    {
+      "id": "vitamin_d",
+      "name": "Vitamin D (25-OH)",
+      "canonicalUnit": "ng/mL",
+      "category": "Vitamins",
+      "aliases": ["vitamin d", "vit d", "25-oh vitamin d", "25-hydroxy vitamin d", "calcidiol", "vitamin d total", "25-oh-d"],
+      "unitConversions": {
+        "ng/ml": 1.0,
+        "mcg/l": 1.0,
+        "nmol/l": 0.40064
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "ng/mL",
+          "normalMin": 30.0,
+          "normalMax": 100.0,
+          "borderlineLowMin": 20.0
+        }
+      ]
+    },
+    {
+      "id": "vitamin_b12",
+      "name": "Vitamin B12",
+      "canonicalUnit": "pg/mL",
+      "category": "Vitamins",
+      "aliases": ["vitamin b12", "vit b12", "b12", "cobalamin", "cyanocobalamin", "serum b12"],
+      "unitConversions": {
+        "pg/ml": 1.0,
+        "ng/l": 1.0,
+        "pmol/l": 1.355
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "pg/mL",
+          "normalMin": 300,
+          "normalMax": 950,
+          "borderlineLowMin": 200
+        }
+      ]
+    },
+    {
+      "id": "ferritin",
+      "name": "Ferritin",
+      "canonicalUnit": "ng/mL",
+      "category": "Iron & Blood",
+      "aliases": ["ferritin", "serum ferritin"],
+      "unitConversions": {
+        "ng/ml": 1.0,
+        "mcg/l": 1.0,
+        "ug/l": 1.0,
+        "pmol/l": 0.445
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "ng/mL",
+          "normalMin": 30,
+          "normalMax": 300,
+          "borderlineLowMin": 20,
+          "borderlineHighMax": 400
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "ng/mL",
+          "normalMin": 20,
+          "normalMax": 200,
+          "borderlineLowMin": 12,
+          "borderlineHighMax": 250
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "ng/mL",
+          "normalMin": 25,
+          "normalMax": 250,
+          "borderlineLowMin": 15,
+          "borderlineHighMax": 300
+        }
+      ]
+    },
+    {
+      "id": "iron",
+      "name": "Serum Iron",
+      "canonicalUnit": "mcg/dL",
+      "category": "Iron & Blood",
+      "aliases": ["iron", "serum iron", "fe", "total iron"],
+      "unitConversions": {
+        "mcg/dl": 1.0,
+        "ug/dl": 1.0,
+        "umol/l": 5.585
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mcg/dL",
+          "normalMin": 65,
+          "normalMax": 175,
+          "borderlineLowMin": 55,
+          "borderlineHighMax": 190
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mcg/dL",
+          "normalMin": 50,
+          "normalMax": 170,
+          "borderlineLowMin": 40,
+          "borderlineHighMax": 185
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mcg/dL",
+          "normalMin": 55,
+          "normalMax": 170,
+          "borderlineLowMin": 45,
+          "borderlineHighMax": 185
+        }
+      ]
+    },
+    {
+      "id": "tsh",
+      "name": "Thyroid Stimulating Hormone (TSH)",
+      "canonicalUnit": "mIU/L",
+      "category": "Thyroid",
+      "aliases": ["tsh", "thyroid stimulating hormone", "thyrotropin", "ultrasensitive tsh"],
+      "unitConversions": {
+        "miu/l": 1.0,
+        "uiu/ml": 1.0,
+        "miu/ml": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mIU/L",
+          "normalMin": 0.40,
+          "normalMax": 4.00,
+          "borderlineHighMax": 4.50
+        }
+      ]
+    },
+    {
+      "id": "free_t3",
+      "name": "Free T3",
+      "canonicalUnit": "pg/mL",
+      "category": "Thyroid",
+      "aliases": ["ft3", "free t3", "triiodothyronine free", "free triiodothyronine", "t3 free"],
+      "unitConversions": {
+        "pg/ml": 1.0,
+        "pmol/l": 0.651
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "pg/mL",
+          "normalMin": 2.0,
+          "normalMax": 4.4,
+          "borderlineLowMin": 1.8,
+          "borderlineHighMax": 4.8
+        }
+      ]
+    },
+    {
+      "id": "free_t4",
+      "name": "Free T4",
+      "canonicalUnit": "ng/dL",
+      "category": "Thyroid",
+      "aliases": ["ft4", "free t4", "thyroxine free", "free thyroxine", "t4 free"],
+      "unitConversions": {
+        "ng/dl": 1.0,
+        "pmol/l": 0.0777
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "ng/dL",
+          "normalMin": 0.8,
+          "normalMax": 1.8,
+          "borderlineLowMin": 0.7,
+          "borderlineHighMax": 2.0
+        }
+      ]
+    },
+    {
+      "id": "creatinine",
+      "name": "Serum Creatinine",
+      "canonicalUnit": "mg/dL",
+      "category": "Kidney Function",
+      "aliases": ["creatinine", "serum creatinine", "creat", "cr"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "umol/l": 0.01131
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 0.74,
+          "normalMax": 1.35,
+          "borderlineHighMax": 1.50
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 0.59,
+          "normalMax": 1.04,
+          "borderlineHighMax": 1.20
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 0.65,
+          "normalMax": 1.20,
+          "borderlineHighMax": 1.35
+        }
+      ]
+    },
+    {
+      "id": "urea",
+      "name": "Blood Urea Nitrogen (BUN)",
+      "canonicalUnit": "mg/dL",
+      "category": "Kidney Function",
+      "aliases": ["urea", "blood urea", "bun", "blood urea nitrogen"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 2.8
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 7.0,
+          "normalMax": 20.0,
+          "borderlineHighMax": 25.0
+        }
+      ]
+    },
+    {
+      "id": "uric_acid",
+      "name": "Uric Acid",
+      "canonicalUnit": "mg/dL",
+      "category": "Kidney Function",
+      "aliases": ["uric acid", "serum uric acid"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "umol/l": 0.01681
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 3.4,
+          "normalMax": 7.0,
+          "borderlineHighMax": 7.8
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 2.4,
+          "normalMax": 6.0,
+          "borderlineHighMax": 6.8
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 3.0,
+          "normalMax": 6.8,
+          "borderlineHighMax": 7.5
+        }
+      ]
+    },
+    {
+      "id": "sgpt_alt",
+      "name": "SGPT (ALT)",
+      "canonicalUnit": "U/L",
+      "category": "Liver Function",
+      "aliases": ["sgpt", "alt", "alanine aminotransferase", "alanine transaminase", "serum glutamic pyruvic transaminase"],
+      "unitConversions": {
+        "u/l": 1.0,
+        "iu/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 9,
+          "normalMax": 46,
+          "borderlineHighMax": 55
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 9,
+          "normalMax": 35,
+          "borderlineHighMax": 45
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 9,
+          "normalMax": 40,
+          "borderlineHighMax": 50
+        }
+      ]
+    },
+    {
+      "id": "sgot_ast",
+      "name": "SGOT (AST)",
+      "canonicalUnit": "U/L",
+      "category": "Liver Function",
+      "aliases": ["sgot", "ast", "aspartate aminotransferase", "aspartate transaminase", "serum glutamic oxaloacetic transaminase"],
+      "unitConversions": {
+        "u/l": 1.0,
+        "iu/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 10,
+          "normalMax": 40,
+          "borderlineHighMax": 50
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 9,
+          "normalMax": 32,
+          "borderlineHighMax": 42
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 10,
+          "normalMax": 36,
+          "borderlineHighMax": 46
+        }
+      ]
+    },
+    {
+      "id": "calcium",
+      "name": "Serum Calcium",
+      "canonicalUnit": "mg/dL",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["calcium", "serum calcium", "total calcium", "ca"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 4.008
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 8.5,
+          "normalMax": 10.2,
+          "borderlineLowMin": 8.2,
+          "borderlineHighMax": 10.5
+        }
+      ]
+    },
+    {
+      "id": "sodium",
+      "name": "Serum Sodium",
+      "canonicalUnit": "mEq/L",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["sodium", "na", "na+", "serum sodium"],
+      "unitConversions": {
+        "meq/l": 1.0,
+        "mmol/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mEq/L",
+          "normalMin": 135,
+          "normalMax": 145,
+          "borderlineLowMin": 132,
+          "borderlineHighMax": 148
+        }
+      ]
+    },
+    {
+      "id": "potassium",
+      "name": "Serum Potassium",
+      "canonicalUnit": "mEq/L",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["potassium", "k", "k+", "serum potassium"],
+      "unitConversions": {
+        "meq/l": 1.0,
+        "mmol/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mEq/L",
+          "normalMin": 3.5,
+          "normalMax": 5.1,
+          "borderlineLowMin": 3.3,
+          "borderlineHighMax": 5.4
+        }
+      ]
+    },
+    {
+      "id": "chloride",
+      "name": "Serum Chloride",
+      "canonicalUnit": "mEq/L",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["chloride", "cl", "cl-", "serum chloride"],
+      "unitConversions": {
+        "meq/l": 1.0,
+        "mmol/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mEq/L",
+          "normalMin": 96,
+          "normalMax": 106,
+          "borderlineLowMin": 93,
+          "borderlineHighMax": 109
+        }
+      ]
+    },
+    {
+      "id": "albumin",
+      "name": "Serum Albumin",
+      "canonicalUnit": "g/dL",
+      "category": "Proteins",
+      "aliases": ["albumin", "serum albumin", "alb"],
+      "unitConversions": {
+        "g/dl": 1.0,
+        "g/l": 0.1
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 3.5,
+          "normalMax": 5.2,
+          "borderlineLowMin": 3.2,
+          "borderlineHighMax": 5.5
+        }
+      ]
+    },
+    {
+      "id": "total_bilirubin",
+      "name": "Total Bilirubin",
+      "canonicalUnit": "mg/dL",
+      "category": "Liver Function",
+      "aliases": ["total bilirubin", "bilirubin total", "t bili", "t. bili"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "umol/l": 0.05847
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 0.2,
+          "normalMax": 1.2,
+          "borderlineHighMax": 1.5
+        }
+      ]
+    },
+    {
+      "id": "direct_bilirubin",
+      "name": "Direct Bilirubin",
+      "canonicalUnit": "mg/dL",
+      "category": "Liver Function",
+      "aliases": ["direct bilirubin", "conjugated bilirubin", "d bili", "d. bili"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "umol/l": 0.05847
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 0.0,
+          "normalMax": 0.3,
+          "borderlineHighMax": 0.4
+        }
+      ]
+    },
+    {
+      "id": "alkaline_phosphatase",
+      "name": "Alkaline Phosphatase",
+      "canonicalUnit": "U/L",
+      "category": "Liver Function",
+      "aliases": ["alkaline phosphatase", "alp", "alk phos"],
+      "unitConversions": {
+        "u/l": 1.0,
+        "iu/l": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "U/L",
+          "normalMin": 44,
+          "normalMax": 147,
+          "borderlineHighMax": 165
+        }
+      ]
+    },
+    {
+      "id": "total_protein",
+      "name": "Total Protein",
+      "canonicalUnit": "g/dL",
+      "category": "Proteins",
+      "aliases": ["total protein", "protein total", "serum total protein"],
+      "unitConversions": {
+        "g/dl": 1.0,
+        "g/l": 0.1
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 6.3,
+          "normalMax": 8.3,
+          "borderlineLowMin": 6.0,
+          "borderlineHighMax": 8.6
+        }
+      ]
+    },
+    {
+      "id": "globulin",
+      "name": "Serum Globulin",
+      "canonicalUnit": "g/dL",
+      "category": "Proteins",
+      "aliases": ["globulin", "serum globulin"],
+      "unitConversions": {
+        "g/dl": 1.0,
+        "g/l": 0.1
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 2.0,
+          "normalMax": 3.5,
+          "borderlineLowMin": 1.8,
+          "borderlineHighMax": 3.8
+        }
+      ]
+    },
+    {
+      "id": "egfr",
+      "name": "eGFR",
+      "canonicalUnit": "mL/min/1.73m2",
+      "category": "Kidney Function",
+      "aliases": ["egfr", "estimated gfr", "estimated glomerular filtration rate", "gfr"],
+      "unitConversions": {
+        "ml/min/1.73m2": 1.0,
+        "ml/min": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mL/min/1.73m2",
+          "normalMin": 90,
+          "normalMax": 140,
+          "borderlineLowMin": 60
+        }
+      ]
+    },
+    {
+      "id": "magnesium",
+      "name": "Serum Magnesium",
+      "canonicalUnit": "mg/dL",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["magnesium", "mg", "serum magnesium"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 2.431,
+        "meq/l": 1.215
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 1.7,
+          "normalMax": 2.2,
+          "borderlineLowMin": 1.5,
+          "borderlineHighMax": 2.4
+        }
+      ]
+    },
+    {
+      "id": "phosphorus",
+      "name": "Serum Phosphorus",
+      "canonicalUnit": "mg/dL",
+      "category": "Electrolytes & Minerals",
+      "aliases": ["phosphorus", "phosphate", "serum phosphorus", "inorganic phosphorus"],
+      "unitConversions": {
+        "mg/dl": 1.0,
+        "mmol/l": 3.097
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mg/dL",
+          "normalMin": 2.5,
+          "normalMax": 4.5,
+          "borderlineLowMin": 2.2,
+          "borderlineHighMax": 4.8
+        }
+      ]
+    },
+    {
+      "id": "hematocrit",
+      "name": "Hematocrit",
+      "canonicalUnit": "%",
+      "category": "Complete Blood Count",
+      "aliases": ["hematocrit", "hct", "pcv", "packed cell volume"],
+      "unitConversions": {
+        "%": 1.0,
+        "ratio": 100.0
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "%",
+          "normalMin": 41.0,
+          "normalMax": 50.0,
+          "borderlineLowMin": 39.0,
+          "borderlineHighMax": 52.0
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "%",
+          "normalMin": 36.0,
+          "normalMax": 44.0,
+          "borderlineLowMin": 34.0,
+          "borderlineHighMax": 46.0
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "%",
+          "normalMin": 38.0,
+          "normalMax": 48.0,
+          "borderlineLowMin": 36.0,
+          "borderlineHighMax": 50.0
+        }
+      ]
+    },
+    {
+      "id": "mcv",
+      "name": "MCV",
+      "canonicalUnit": "fL",
+      "category": "Complete Blood Count",
+      "aliases": ["mcv", "mean corpuscular volume"],
+      "unitConversions": {
+        "fl": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "fL",
+          "normalMin": 80.0,
+          "normalMax": 96.0,
+          "borderlineLowMin": 77.0,
+          "borderlineHighMax": 100.0
+        }
+      ]
+    },
+    {
+      "id": "mch",
+      "name": "MCH",
+      "canonicalUnit": "pg",
+      "category": "Complete Blood Count",
+      "aliases": ["mch", "mean corpuscular hemoglobin"],
+      "unitConversions": {
+        "pg": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "pg",
+          "normalMin": 27.0,
+          "normalMax": 33.0,
+          "borderlineLowMin": 25.0,
+          "borderlineHighMax": 35.0
+        }
+      ]
+    },
+    {
+      "id": "mchc",
+      "name": "MCHC",
+      "canonicalUnit": "g/dL",
+      "category": "Complete Blood Count",
+      "aliases": ["mchc", "mean corpuscular hemoglobin concentration"],
+      "unitConversions": {
+        "g/dl": 1.0,
+        "g/l": 0.1
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "g/dL",
+          "normalMin": 32.0,
+          "normalMax": 36.0,
+          "borderlineLowMin": 31.0,
+          "borderlineHighMax": 37.0
+        }
+      ]
+    },
+    {
+      "id": "rdw",
+      "name": "RDW",
+      "canonicalUnit": "%",
+      "category": "Complete Blood Count",
+      "aliases": ["rdw", "red cell distribution width", "rdw-cv"],
+      "unitConversions": {
+        "%": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "%",
+          "normalMin": 11.5,
+          "normalMax": 14.5,
+          "borderlineHighMax": 16.0
+        }
+      ]
+    },
+    {
+      "id": "esr",
+      "name": "ESR",
+      "canonicalUnit": "mm/hr",
+      "category": "Inflammation",
+      "aliases": ["esr", "erythrocyte sedimentation rate"],
+      "unitConversions": {
+        "mm/hr": 1.0,
+        "mm/h": 1.0
+      },
+      "ranges": [
+        {
+          "sex": "male",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mm/hr",
+          "normalMin": 0,
+          "normalMax": 15,
+          "borderlineHighMax": 20
+        },
+        {
+          "sex": "female",
+          "minAge": 18,
+          "maxAge": 120,
+          "unit": "mm/hr",
+          "normalMin": 0,
+          "normalMax": 20,
+          "borderlineHighMax": 25
+        },
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "mm/hr",
+          "normalMin": 0,
+          "normalMax": 18,
+          "borderlineHighMax": 22
+        }
+      ]
+    },
+    {
+      "id": "neutrophils",
+      "name": "Absolute Neutrophil Count",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["neutrophils", "anc", "absolute neutrophil count", "neutrophil count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "k/ul": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 1500,
+          "normalMax": 8000,
+          "borderlineLowMin": 1200,
+          "borderlineHighMax": 9000
+        }
+      ]
+    },
+    {
+      "id": "lymphocytes",
+      "name": "Absolute Lymphocyte Count",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["lymphocytes", "alc", "absolute lymphocyte count", "lymphocyte count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "k/ul": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 1000,
+          "normalMax": 4800,
+          "borderlineLowMin": 800,
+          "borderlineHighMax": 5200
+        }
+      ]
+    },
+    {
+      "id": "monocytes",
+      "name": "Absolute Monocytes",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["monocytes", "absolute monocytes", "monocyte count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "k/ul": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 200,
+          "normalMax": 800,
+          "borderlineLowMin": 150,
+          "borderlineHighMax": 1000
+        }
+      ]
+    },
+    {
+      "id": "eosinophils",
+      "name": "Absolute Eosinophils",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["eosinophils", "absolute eosinophils", "eosinophil count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "k/ul": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 15,
+          "normalMax": 500,
+          "borderlineHighMax": 650
+        }
+      ]
+    },
+    {
+      "id": "basophils",
+      "name": "Absolute Basophils",
+      "canonicalUnit": "/mcL",
+      "category": "Complete Blood Count",
+      "aliases": ["basophils", "absolute basophils", "basophil count"],
+      "unitConversions": {
+        "/mcl": 1.0,
+        "/ul": 1.0,
+        "10^3/mcl": 1000.0,
+        "k/ul": 1000.0
+      },
+      "ranges": [
+        {
+          "sex": "any",
+          "minAge": 0,
+          "maxAge": 120,
+          "unit": "/mcL",
+          "normalMin": 0,
+          "normalMax": 200,
+          "borderlineHighMax": 300
+        }
+      ]
+    }
+  ]
+}

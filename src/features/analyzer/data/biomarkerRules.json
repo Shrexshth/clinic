@@ -1,0 +1,434 @@
+{
+  "version": "1.0.0",
+  "disclaimer": "Informational only, not medical advice. Clinical ranges represent established adult laboratory standards.",
+  "panels": [
+    {
+      "id": "cbc",
+      "name": "Complete Blood Count & Iron",
+      "description": "Oxygen transportation, cellular vitality, and iron reserves"
+    },
+    {
+      "id": "metabolic",
+      "name": "Metabolic & Blood Sugar",
+      "description": "Insulin sensitivity, glycemic stability, and glucose regulation"
+    },
+    {
+      "id": "lipids",
+      "name": "Cardiometabolic & Lipid Profile",
+      "description": "Cardiovascular risk markers, arterial integrity, and lipid particles"
+    },
+    {
+      "id": "vitamins",
+      "name": "Vitamins & Micronutrients",
+      "description": "Neurological integrity, mitochondrial energy, and immune signaling"
+    },
+    {
+      "id": "organ_function",
+      "name": "Liver & Kidney Health",
+      "description": "Hepatic enzyme clearance, renal filtration, and detoxification"
+    },
+    {
+      "id": "thyroid_inflammation",
+      "name": "Thyroid & Systemic Inflammation",
+      "description": "Metabolic pacing, endocrine balance, and vascular inflammation"
+    }
+  ],
+  "biomarkers": [
+    {
+      "id": "hemoglobin",
+      "name": "Hemoglobin (Hb)",
+      "panelId": "cbc",
+      "unit": "g/dL",
+      "category": "Complete Blood Count",
+      "aliases": ["hb", "hgb", "haemoglobin"],
+      "ranges": {
+        "criticalLow": 8.0,
+        "low": 12.0,
+        "optimalMin": 13.0,
+        "optimalMax": 16.5,
+        "high": 17.5,
+        "criticalHigh": 19.5
+      },
+      "description": "Iron-rich protein in red blood cells carrying oxygen from lungs to muscles and tissues.",
+      "implicationsLow": "Tissue hypoxia, fatigue, weakness, cold intolerance, dizziness, microcytic anemia.",
+      "implicationsHigh": "Elevated blood viscosity, dehydration, smoking compensation, polycythemia.",
+      "primaryNutrientTargets": ["Heme Iron", "Non-Heme Iron", "Vitamin C", "Folate (B9)", "Copper"],
+      "foodsToPrioritize": ["Lentils", "Spinach", "Sprouted pumpkin seeds", "Grass-fed beef or bison", "Black beans", "Citrus (enhances iron)"],
+      "foodsToAvoid": ["Black tea and coffee consumed with iron meals", "Excessive unprocessed bran (phytates)", "Calcium carbonate supplements during meals"]
+    },
+    {
+      "id": "hematocrit",
+      "name": "Hematocrit (Hct)",
+      "panelId": "cbc",
+      "unit": "%",
+      "category": "Complete Blood Count",
+      "aliases": ["hct", "packed cell volume", "pcv"],
+      "ranges": {
+        "criticalLow": 25.0,
+        "low": 36.0,
+        "optimalMin": 38.0,
+        "optimalMax": 48.0,
+        "high": 52.0,
+        "criticalHigh": 60.0
+      },
+      "description": "Percentage of total blood volume made up of red blood cells.",
+      "implicationsLow": "Reduced oxygen capacity, blood loss, chronic fatigue, nutritional deficiency.",
+      "implicationsHigh": "Hemoconcentration, hypovolemia, dehydration, hypoxia compensation.",
+      "primaryNutrientTargets": ["Hydration", "Bioavailable Iron", "Cobalamin (B12)"],
+      "foodsToPrioritize": ["Electrolyte-rich coconut water", "Steamed beets", "Dark leafy greens", "Sardines"],
+      "foodsToAvoid": ["Dehydrating diuretic beverages", "Excessive alcohol"]
+    },
+    {
+      "id": "ferritin",
+      "name": "Serum Ferritin",
+      "panelId": "cbc",
+      "unit": "ng/mL",
+      "category": "Complete Blood Count",
+      "aliases": ["ferritin", "iron stores"],
+      "ranges": {
+        "criticalLow": 12.0,
+        "low": 30.0,
+        "optimalMin": 50.0,
+        "optimalMax": 150.0,
+        "high": 250.0,
+        "criticalHigh": 400.0
+      },
+      "description": "Intracellular storage protein representing your body's total iron reserves in the liver, spleen, and bone marrow.",
+      "implicationsLow": "Depleted iron reserves, restless legs, hair shedding, brain fog, pre-anemic exhaustion.",
+      "implicationsHigh": "Systemic inflammation, hepatic stress, metabolic dysregulation, hemochromatosis.",
+      "primaryNutrientTargets": ["Iron Cofactors", "Vitamin C (Ascorbic Acid)", "Vitamin A"],
+      "foodsToPrioritize": ["Sesame tahini", "Cooked dark spinach", "Kidney beans", "Blackstrap molasses", "Tempeh", "Strawberries & bell peppers (Vit C)"],
+      "foodsToAvoid": ["Tannin-heavy teas at mealtime", "Cow's milk alongside iron meals", "Ultra-processed seed oils"]
+    },
+    {
+      "id": "fasting_glucose",
+      "name": "Fasting Blood Glucose",
+      "panelId": "metabolic",
+      "unit": "mg/dL",
+      "category": "Metabolic & Blood Sugar",
+      "aliases": ["glucose", "fbs", "fasting sugar", "blood sugar"],
+      "ranges": {
+        "criticalLow": 55.0,
+        "low": 70.0,
+        "optimalMin": 72.0,
+        "optimalMax": 95.0,
+        "high": 100.0,
+        "criticalHigh": 126.0
+      },
+      "description": "Amount of free circulating sugar in your bloodstream after an overnight 8-12 hour fast.",
+      "implicationsLow": "Hypoglycemia, shakiness, autonomic sweating, cognitive impairment, irritability.",
+      "implicationsHigh": "Impaired fasting glucose, hepatic insulin resistance, pancreatic stress, pre-diabetes.",
+      "primaryNutrientTargets": ["Soluble Viscous Fiber", "Magnesium", "Chromium", "Alpha-Lipoic Acid"],
+      "foodsToPrioritize": ["Chia seeds", "Steel-cut rolled oats", "Ceylon cinnamon", "Avocados", "Broccoli sprouts", "Apple cider vinegar before meals"],
+      "foodsToAvoid": ["Refined flours", "High-fructose corn syrup", "Fruit juices without fiber", "Sugary pastries"]
+    },
+    {
+      "id": "hba1c",
+      "name": "Hemoglobin A1c (HbA1c)",
+      "panelId": "metabolic",
+      "unit": "%",
+      "category": "Metabolic & Blood Sugar",
+      "aliases": ["a1c", "glycated hemoglobin", "hba1c"],
+      "ranges": {
+        "criticalLow": 4.0,
+        "low": 4.5,
+        "optimalMin": 4.8,
+        "optimalMax": 5.4,
+        "high": 5.7,
+        "criticalHigh": 6.5
+      },
+      "description": "Percentage of hemoglobin bound to glucose, reflecting your average blood glucose over the past 90-120 days.",
+      "implicationsLow": "Hemolytic anemia, frequent hypoglycemic episodes, shortened red blood cell turnover.",
+      "implicationsHigh": "Pre-diabetes (5.7-6.4%), diabetes (>=6.5%), advanced glycation end-products (AGEs), microvascular stress.",
+      "primaryNutrientTargets": ["Polyphenols", "Resistant Starch", "Berberine-like compounds", "Omega-3 Fatty Acids"],
+      "foodsToPrioritize": ["Wild blueberries", "Cooled boiled potatoes (resistant starch)", "Raw walnuts", "Organic green tea", "Wild salmon", "Lupini beans"],
+      "foodsToAvoid": ["Liquid sugar drinks", "Ultra-processed snack foods", "Refined white rice and bread"]
+    },
+    {
+      "id": "total_cholesterol",
+      "name": "Total Cholesterol",
+      "panelId": "lipids",
+      "unit": "mg/dL",
+      "category": "Cardiometabolic & Lipid Profile",
+      "aliases": ["cholesterol", "tc", "total chol"],
+      "ranges": {
+        "criticalLow": 110.0,
+        "low": 130.0,
+        "optimalMin": 150.0,
+        "optimalMax": 199.0,
+        "high": 200.0,
+        "criticalHigh": 240.0
+      },
+      "description": "Composite measurement of all sterol lipoproteins (HDL, LDL, VLDL) circulating in your blood.",
+      "implicationsLow": "Impaired steroid hormone synthesis, cellular membrane instability, mood vulnerability.",
+      "implicationsHigh": "Excess circulating sterols, potential atherogenic risk depending on particle size and inflammation.",
+      "primaryNutrientTargets": ["Phytosterols", "Beta-Glucan", "Monounsaturated Fats (MUFAs)"],
+      "foodsToPrioritize": ["Extra virgin olive oil", "Oat bran", "Almonds", "Barley", "Artichoke hearts"],
+      "foodsToAvoid": ["Hydrogenated trans fats", "Deep-fried foods", "Commercial baked goods"]
+    },
+    {
+      "id": "ldl_cholesterol",
+      "name": "LDL Cholesterol",
+      "panelId": "lipids",
+      "unit": "mg/dL",
+      "category": "Cardiometabolic & Lipid Profile",
+      "aliases": ["ldl", "bad cholesterol", "ldl-c"],
+      "ranges": {
+        "criticalLow": 40.0,
+        "low": 50.0,
+        "optimalMin": 60.0,
+        "optimalMax": 99.0,
+        "high": 100.0,
+        "criticalHigh": 160.0
+      },
+      "description": "Low-density lipoprotein delivering cholesterol from the liver to peripheral tissues; prone to oxidation under inflammatory conditions.",
+      "implicationsLow": "Nutritional malabsorption, severe hyperthyroidism, potential fat-soluble vitamin deficit.",
+      "implicationsHigh": "Endothelial plaque accumulation risk, vascular shear stress, oxidized LDL formation.",
+      "primaryNutrientTargets": ["Soluble Fiber", "Niacin (B3)", "Antioxidants (Lycopene, CoQ10)"],
+      "foodsToPrioritize": ["Cooked tomatoes in olive oil", "Psyllium husk", "Brussels sprouts", "Eggplant", "Flaxseed meal"],
+      "foodsToAvoid": ["Palm kernel oil", "Processed meats (sausages, bacon)", "High-temperature deep-fried foods"]
+    },
+    {
+      "id": "hdl_cholesterol",
+      "name": "HDL Cholesterol",
+      "panelId": "lipids",
+      "unit": "mg/dL",
+      "category": "Cardiometabolic & Lipid Profile",
+      "aliases": ["hdl", "good cholesterol", "hdl-c"],
+      "ranges": {
+        "criticalLow": 25.0,
+        "low": 40.0,
+        "optimalMin": 50.0,
+        "optimalMax": 85.0,
+        "high": 95.0,
+        "criticalHigh": 115.0
+      },
+      "description": "High-density lipoprotein facilitating reverse cholesterol transport from vascular tissue back to the liver for excretion.",
+      "implicationsLow": "Impaired reverse transport, heightened cardiometabolic and atherosclerotic vulnerability.",
+      "implicationsHigh": "Usually protective; extreme levels (>100 mg/dL) can sometimes reflect dysfunctional oxidized HDL particles.",
+      "primaryNutrientTargets": ["Omega-3 EPA/DHA", "Polyphenols", "Antioxidant Minerals"],
+      "foodsToPrioritize": ["Wild Alaskan salmon", "Avocado", "Pecans", "Extra virgin olive oil", "Kalamata olives"],
+      "foodsToAvoid": ["Industrial seed oils reheated multiple times", "Sedentary lifestyle", "Refined carbohydrate overload"]
+    },
+    {
+      "id": "triglycerides",
+      "name": "Triglycerides",
+      "panelId": "lipids",
+      "unit": "mg/dL",
+      "category": "Cardiometabolic & Lipid Profile",
+      "aliases": ["tg", "trigs", "triglyceride"],
+      "ranges": {
+        "criticalLow": 35.0,
+        "low": 45.0,
+        "optimalMin": 50.0,
+        "optimalMax": 99.0,
+        "high": 150.0,
+        "criticalHigh": 200.0
+      },
+      "description": "Primary storage form of fat in the blood, heavily influenced by recent dietary sugar, alcohol, and carbohydrate consumption.",
+      "implicationsLow": "Malnutrition, extreme hypolipidemia, overactive thyroid function.",
+      "implicationsHigh": "Hepatic steatosis (fatty liver risk), metabolic syndrome, pancreatitis risk at severe levels.",
+      "primaryNutrientTargets": ["Marine Omega-3s", "Curcumin", "Sulfur-rich compounds"],
+      "foodsToPrioritize": ["Mackerel & sardines", "Garlic and onions", "Turmeric with black pepper", "Raw walnuts", "Green tea"],
+      "foodsToAvoid": ["Alcohol and beer", "Refined sweeteners", "Corn syrup sweetened beverages", "White flour bakery"]
+    },
+    {
+      "id": "vitamin_d",
+      "name": "Vitamin D (25-OH)",
+      "panelId": "vitamins",
+      "unit": "ng/mL",
+      "category": "Vitamins & Micronutrients",
+      "aliases": ["vit d", "25-hydroxy vitamin d", "calcidiol", "vitamin d3"],
+      "ranges": {
+        "criticalLow": 15.0,
+        "low": 29.0,
+        "optimalMin": 40.0,
+        "optimalMax": 70.0,
+        "high": 80.0,
+        "criticalHigh": 100.0
+      },
+      "description": "Secosteroid hormone governing intestinal calcium absorption, immune system regulation, bone mineral density, and gene expression.",
+      "implicationsLow": "Immune vulnerability, seasonal affective slump, bone ache, low mood, muscle weakness.",
+      "implicationsHigh": "Hypercalcemia risk, renal calcium deposition (rare unless mega-dosing synthetic supplements).",
+      "primaryNutrientTargets": ["Vitamin D3", "Vitamin K2 (MK-7)", "Magnesium (activates D3)", "Zinc"],
+      "foodsToPrioritize": ["UV-exposed cremini mushrooms", "Egg yolks from pasture-raised hens", "Wild salmon & canned cod liver", "Fortified almond/soy milk"],
+      "foodsToAvoid": ["Lack of sun exposure", "Chronic stress depleting magnesium", "Excessive processed calcium supplements without K2"]
+    },
+    {
+      "id": "vitamin_b12",
+      "name": "Vitamin B12 (Cobalamin)",
+      "panelId": "vitamins",
+      "unit": "pg/mL",
+      "category": "Vitamins & Micronutrients",
+      "aliases": ["b12", "cobalamin", "cyanocobalamin", "methylcobalamin"],
+      "ranges": {
+        "criticalLow": 180.0,
+        "low": 300.0,
+        "optimalMin": 450.0,
+        "optimalMax": 850.0,
+        "high": 950.0,
+        "criticalHigh": 1200.0
+      },
+      "description": "Crucial coenzyme for red blood cell DNA replication, homocysteine methylation, and myelin nerve sheath preservation.",
+      "implicationsLow": "Peripheral neuropathy, tingling in fingers/toes, megaloblastic anemia, cognitive slowing, elevated homocysteine.",
+      "implicationsHigh": "Usually benign (water-soluble); elevated levels can occasionally reflect hepatic release or high supplementation.",
+      "primaryNutrientTargets": ["Active Methylcobalamin", "Folate", "Betaine (TMG)"],
+      "foodsToPrioritize": ["Fortified nutritional yeast flakes", "Tempeh & spirulina (supportive)", "Wild sardines & oysters", "Greek yogurt or kefir"],
+      "foodsToAvoid": ["Chronic antacid / PPI overuse (impairs intrinsic factor acid)", "Excessive alcohol destroying gut mucosal lining"]
+    },
+    {
+      "id": "magnesium",
+      "name": "Serum Magnesium",
+      "panelId": "vitamins",
+      "unit": "mg/dL",
+      "category": "Vitamins & Micronutrients",
+      "aliases": ["mg", "magnesium", "serum mg"],
+      "ranges": {
+        "criticalLow": 1.4,
+        "low": 1.8,
+        "optimalMin": 2.0,
+        "optimalMax": 2.4,
+        "high": 2.6,
+        "criticalHigh": 3.0
+      },
+      "description": "Intracellular mineral cofactor for over 300 enzymatic processes including ATP energy production, muscle relaxation, and cardiac rhythm.",
+      "implicationsLow": "Muscle spasms, nocturnal leg cramps, sleep disruption, arrhythmia, elevated anxiety.",
+      "implicationsHigh": "Depressed deep tendon reflexes, hypotension, renal excretion delay.",
+      "primaryNutrientTargets": ["Magnesium Glycinate / Malate", "Potassium", "Vitamin B6"],
+      "foodsToPrioritize": ["Raw pumpkin seeds (pepitas)", "Dark cocoa / cacao (>85%)", "Cooked Swiss chard", "Black beans", "Almonds and cashews"],
+      "foodsToAvoid": ["Excess refined sodium", "High phosphoric acid sodas", "Chronic high-stress cortisol spikes"]
+    },
+    {
+      "id": "alt_sgpt",
+      "name": "ALT (SGPT)",
+      "panelId": "organ_function",
+      "unit": "U/L",
+      "category": "Liver & Kidney Health",
+      "aliases": ["alt", "sgpt", "alanine aminotransferase"],
+      "ranges": {
+        "criticalLow": 5.0,
+        "low": 9.0,
+        "optimalMin": 12.0,
+        "optimalMax": 30.0,
+        "high": 35.0,
+        "criticalHigh": 60.0
+      },
+      "description": "Hepatic enzyme concentrated in liver hepatocytes; released into bloodstream following liver cellular stress or inflammation.",
+      "implicationsLow": "Generally benign; occasionally associated with vitamin B6 insufficiency or frail muscle mass.",
+      "implicationsHigh": "Hepatocellular irritation, non-alcoholic fatty liver (NAFLD), medication stress, alcohol burden.",
+      "primaryNutrientTargets": ["Choline", "Glutathione precursors (NAC/Glycine)", "Silymarin"],
+      "foodsToPrioritize": ["Cruciferous vegetables (Brussels sprouts, broccoli)", "Artichokes", "Dandelion root tea", "Pasture-raised eggs (choline)", "Beetroots"],
+      "foodsToAvoid": ["Alcohol", "Excess acetaminophen/NSAIDs", "High-fructose corn syrup", "Industrial seed oils"]
+    },
+    {
+      "id": "ast_sgot",
+      "name": "AST (SGOT)",
+      "panelId": "organ_function",
+      "unit": "U/L",
+      "category": "Liver & Kidney Health",
+      "aliases": ["ast", "sgot", "aspartate aminotransferase"],
+      "ranges": {
+        "criticalLow": 6.0,
+        "low": 10.0,
+        "optimalMin": 12.0,
+        "optimalMax": 30.0,
+        "high": 35.0,
+        "criticalHigh": 55.0
+      },
+      "description": "Enzyme present in liver tissue, skeletal muscle, and cardiac tissue; indicates cellular repair demand.",
+      "implicationsLow": "Rarely clinically significant; can mirror low B6 or minimal physical demand.",
+      "implicationsHigh": "Hepatic or strenuous muscular breakdown, intense eccentric exercise, liver cell stress.",
+      "primaryNutrientTargets": ["Antioxidant Polyphenols", "Vitamin E (Tocopherols)", "Selenium"],
+      "foodsToPrioritize": ["Sunflower seeds (Vit E)", "Brazil nuts (1-2 per day for selenium)", "Green tea catechins", "Fresh berries"],
+      "foodsToAvoid": ["Strenuous dehydration", "Binge drinking", "Ultra-processed trans fats"]
+    },
+    {
+      "id": "creatinine",
+      "name": "Serum Creatinine",
+      "panelId": "organ_function",
+      "unit": "mg/dL",
+      "category": "Liver & Kidney Health",
+      "aliases": ["creatinine", "creat", "serum creat"],
+      "ranges": {
+        "criticalLow": 0.4,
+        "low": 0.6,
+        "optimalMin": 0.7,
+        "optimalMax": 1.1,
+        "high": 1.25,
+        "criticalHigh": 1.8
+      },
+      "description": "Natural byproduct of muscular phosphocreatine breakdown, filtered freely by healthy renal glomeruli.",
+      "implicationsLow": "Very low muscle mass, muscular atrophy, severe hepatic dysfunction, inadequate protein intake.",
+      "implicationsHigh": "Reduced glomerular filtration rate, acute dehydration, heavy oral creatine supplementation, renal strain.",
+      "primaryNutrientTargets": ["Cellular Hydration", "Electrolytes", "Moderate Quality Protein"],
+      "foodsToPrioritize": ["Pure water with lemon", "Cucumbers & celery", "Blueberries and cranberries", "Steamed asparagus"],
+      "foodsToAvoid": ["Excessive NSAIDs (ibuprofen/naproxen)", "Dehydration", "Massive unmoderated synthetic creatine loading"]
+    },
+    {
+      "id": "egfr",
+      "name": "eGFR (Kidney Filtration)",
+      "panelId": "organ_function",
+      "unit": "mL/min/1.73m²",
+      "category": "Liver & Kidney Health",
+      "aliases": ["egfr", "gfr", "estimated gfr"],
+      "ranges": {
+        "criticalLow": 30.0,
+        "low": 60.0,
+        "optimalMin": 90.0,
+        "optimalMax": 120.0,
+        "high": 130.0,
+        "criticalHigh": 145.0
+      },
+      "description": "Estimated Glomerular Filtration Rate calculating how efficiently the kidneys filter waste per minute.",
+      "implicationsLow": "Decreased renal filtration capacity; values below 60 warrant prompt nephrology consultation.",
+      "implicationsHigh": "High hyperfiltration; may occur in early diabetes, severe pregnancy, or high body surface area.",
+      "primaryNutrientTargets": ["Renal Protective Antioxidants", "Controlled Sodium", "Adequate Hydration"],
+      "foodsToPrioritize": ["Watercress", "Red bell peppers", "Wild blueberries", "Cauliflower mash", "Garlic"],
+      "foodsToAvoid": ["High sodium canned foods", "Excess synthetic phosphorus additives", "Colas with phosphoric acid"]
+    },
+    {
+      "id": "tsh",
+      "name": "Thyroid Stimulating Hormone (TSH)",
+      "panelId": "thyroid_inflammation",
+      "unit": "µIU/mL",
+      "category": "Thyroid & Systemic Inflammation",
+      "aliases": ["tsh", "thyrotropin"],
+      "ranges": {
+        "criticalLow": 0.1,
+        "low": 0.35,
+        "optimalMin": 0.8,
+        "optimalMax": 2.5,
+        "high": 4.0,
+        "criticalHigh": 7.0
+      },
+      "description": "Pituitary hormone instructing the thyroid gland to synthesize thyroxine (T4) and triiodothyronine (T3).",
+      "implicationsLow": "Hyperthyroidism, palpitations, heat intolerance, unexplained weight loss, anxiety.",
+      "implicationsHigh": "Hypothyroidism (subclinical or clinical), sluggish metabolism, constipation, cold sensitivity, dry skin.",
+      "primaryNutrientTargets": ["Iodine", "Selenium", "Zinc", "Tyrosine"],
+      "foodsToPrioritize": ["Nori / Wakame sea vegetables (moderated iodine)", "Brazil nuts", "Pumpkin seeds", "Organic poultry or tempeh"],
+      "foodsToAvoid": ["Raw excessive cruciferous veggies (goitrogens - cook them thoroughly)", "Soy isolate supplements taken simultaneously with thyroid hormone"]
+    },
+    {
+      "id": "hs_crp",
+      "name": "High-Sensitivity CRP (hs-CRP)",
+      "panelId": "thyroid_inflammation",
+      "unit": "mg/L",
+      "category": "Thyroid & Systemic Inflammation",
+      "aliases": ["crp", "hs-crp", "c-reactive protein", "hscrp"],
+      "ranges": {
+        "criticalLow": 0.05,
+        "low": 0.1,
+        "optimalMin": 0.2,
+        "optimalMax": 0.9,
+        "high": 2.0,
+        "criticalHigh": 3.0
+      },
+      "description": "Acute-phase hepatic protein that surges in response to systemic vascular inflammation, infection, or tissue injury.",
+      "implicationsLow": "Excellent low systemic inflammation, favorable vascular baseline.",
+      "implicationsHigh": "Moderate cardiovascular risk (1.0-3.0 mg/L), high cardiovascular risk or systemic inflammation (>3.0 mg/L).",
+      "primaryNutrientTargets": ["Anti-inflammatory Polyphenols", "Anthocyanins", "Omega-3 Index"],
+      "foodsToPrioritize": ["Tart cherries", "Wild caught salmon", "Ginger root & turmeric", "Dark leafy greens", "Extra virgin olive oil (oleocanthal)"],
+      "foodsToAvoid": ["Refined industrial seed oils (corn/soybean oil)", "Deep-fried foods", "Charred meats", "High-glycemic processed carbohydrates"]
+    }
+  ]
+}
